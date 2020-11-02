@@ -1,4 +1,5 @@
 require("dotenv").config();
+import createTransaction from "./createTransaction";
 // import app from "./app";
 import getAllProduct from "./getAllProduct";
 import getBalances from "./getBalances";
@@ -34,3 +35,35 @@ import getProductByType from "./getProductByType";
 
 // Retrieve balances
 getBalances();
+
+// create transaction
+// createTransaction({
+//   external_id: "trs01",
+//   product_id: "32",
+//   auto_confirm: false,
+//   sender: {
+//     last_name: "luna",
+//     first_name: "vika",
+//     middle_name: "marissa",
+//     nationality_country_iso_code: "BRA",
+//     mobile_number: "+62811223344",
+//     email: "string",
+//   },
+//   beneficiary: {
+//     last_name: "string",
+//     first_name: "string",
+//     middle_name: "string",
+//     nationality_country_iso_code: "BRA",
+//     mobile_number: "+62811227788",
+//     email: "string",
+//   },
+//   debit_party_identifier: {
+//     mobile_number: "+6281123456789",
+//     account_number: "112",
+//   },
+//   credit_party_identifier: {
+//     mobile_number: "+6281123456779",
+//     account_number: "112",
+//   },
+//   callback_url: "http://example.com",
+// });
