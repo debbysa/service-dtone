@@ -1,5 +1,8 @@
 require("dotenv").config();
+import cancelTransaction from "./cancelTransaction";
+import confirmTransaction from "./confirmTransaction";
 import createTransaction from "./createTransaction";
+import getAllListofTransaction from "./getAllListofTransaction";
 // import app from "./app";
 import getAllProduct from "./getAllProduct";
 import getBalances from "./getBalances";
@@ -8,6 +11,7 @@ import getProductById from "./getProductById";
 import getProductByOperatorID from "./getProductByOperatorId";
 import getProductByService_Id from "./getProductByService_Id";
 import getProductByType from "./getProductByType";
+import getTransactionById from "./getTransactionById";
 
 // const port = process.env.PORT || 3000;
 
@@ -34,36 +38,48 @@ import getProductByType from "./getProductByType";
 // getProductById(32);
 
 // Retrieve balances
-getBalances();
+// getBalances();
 
 // create transaction
 // createTransaction({
-//   external_id: "trs01",
-//   product_id: "32",
+//   external_id: "trs04",
+//   product_id: "147",
 //   auto_confirm: false,
 //   sender: {
-//     last_name: "luna",
-//     first_name: "vika",
-//     middle_name: "marissa",
-//     nationality_country_iso_code: "BRA",
-//     mobile_number: "+62811223344",
+//     last_name: "lili",
+//     first_name: "vivi",
+//     middle_name: "marry",
+//     nationality_country_iso_code: "IDN",
+//     mobile_number: "+62811223344100",
 //     email: "string",
 //   },
 //   beneficiary: {
-//     last_name: "string",
-//     first_name: "string",
-//     middle_name: "string",
-//     nationality_country_iso_code: "BRA",
-//     mobile_number: "+62811227788",
+//     last_name: "dini",
+//     first_name: "marchella",
+//     middle_name: "luna",
+//     nationality_country_iso_code: "IDN",
+//     mobile_number: "+62811227100",
 //     email: "string",
 //   },
 //   debit_party_identifier: {
-//     mobile_number: "+6281123456789",
+//     mobile_number: "+6281123456100",
 //     account_number: "112",
 //   },
 //   credit_party_identifier: {
-//     mobile_number: "+6281123456779",
+//     mobile_number: "+6281123456100",
 //     account_number: "112",
 //   },
 //   callback_url: "http://example.com",
 // });
+
+// get transaction by ID
+// getTransactionById(2237503397);
+
+// get list of transaction
+getAllListofTransaction();
+
+// confirm transaction
+// confirmTransaction(2237503400);
+
+// cancel transaction
+// cancelTransaction(2237503401);
