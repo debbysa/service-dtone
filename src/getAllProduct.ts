@@ -4,8 +4,9 @@ import axios, { AxiosResponse } from "axios";
 const getAllProduct = async () => {
   try {
     const response = await axios.get(process.env.URL + "/products", {
-      headers: {
-        Authorization: process.env.AUTHORIZATION,
+      auth: {
+        username: process.env.USERNAME || "",
+        password: process.env.PASSWORD || "",
       },
     });
     console.log(response.data);
