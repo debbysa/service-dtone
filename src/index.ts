@@ -1,48 +1,37 @@
 require("dotenv").config();
-import cancelTransaction from "./cancelTransaction";
-import confirmTransaction from "./confirmTransaction";
-import createTransaction from "./createTransaction";
-import getAllListofTransaction from "./getAllListofTransaction";
-// import app from "./app";
-import getAllProduct from "./getAllProduct";
-import getBalances from "./getBalances";
-import getProductByCountryISO from "./getProductByCountryISO";
-import getProductById from "./getProductById";
-import getProductByOperatorID from "./getProductByOperatorId";
-import getProductByService_Id from "./getProductByService_Id";
-import getProductByType from "./getProductByType";
-import getTransactionById from "./getTransactionById";
 
-// const port = process.env.PORT || 3000;
+import ProvideDTone from "./provide-dtone";
 
-// app.listen(port, () => {
-//   console.log(`server listening on = localhost ${port}`);
-// });
+let DTOneService = new ProvideDTone(
+  process.env.URL || "",
+  process.env.USERNAME || "",
+  process.env.PASSWORD || ""
+);
 
 // Retrieve list of products DTOne
-// getAllProduct();
+// DTOneService.getAllProduct();
 
 // Retrieve list of products by type
-// getProductByType("FIXED_VALUE_PIN_PURCHASE");
+// DTOneService.getProductByType("FIXED_VALUE_PIN_PURCHASE");
 
 // Retrieve list of products by Service_ID
-// getProductByService_Id(6);
+// DTOneService.getProductByService_Id(6);
 
 // Retrieve list of products by country_iso_code
-// getProductByCountryISO("MYS");
+// DTOneService.getProductByCountryISO("MYS");
 
 // Retrieve list of products by operator_id
-// getProductByOperatorID(1671);
+// DTOneService.getProductByOperatorID(1671);
 
 // Retrieve product by ID
-// getProductById(32);
+// DTOneService.getProductById(148);
 
 // Retrieve balances
-// getBalances();
+// DTOneService.getBalances();
 
 // create transaction
-// createTransaction({
-//   external_id: "trs06",
+// DTOneService.createTransaction({
+//   external_id: "trx01",
 //   product_id: "147",
 //   auto_confirm: false,
 //   sender: {
@@ -73,13 +62,13 @@ import getTransactionById from "./getTransactionById";
 // });
 
 // get transaction by ID
-// getTransactionById(2237503420);
+// DTOneService.getTransactionById(2237503789);
 
 // get list of transaction
-getAllListofTransaction();
+DTOneService.getAllListofTransaction();
 
 // confirm transaction
-// confirmTransaction(2237503400);
+// DTOneService.confirmTransaction(2237503789);
 
 // cancel transaction
-// cancelTransaction(2237503420);
+// DTOneService.cancelTransaction(2237503420);
