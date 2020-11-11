@@ -1,8 +1,8 @@
+import ServiceDTOne from "./service-dtone";
+
 require("dotenv").config();
 
-import ProvideDTone from "./provide-dtone";
-
-let DTOneService = new ProvideDTone(
+let DTOneService = new ServiceDTOne(
   process.env.URL || "",
   process.env.USERNAME || "",
   process.env.PASSWORD || ""
