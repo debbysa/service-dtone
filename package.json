@@ -1,6 +1,6 @@
 {
   "name": "@debbysa23/service-dtone",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "This is a service to access api from DTOne",
   "main": "./src/service-dtone.ts",
   "scripts": {
