@@ -26,10 +26,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/debbysa/implement-dtone.git"
+    "url": "git+https://github.com/debbysa/service-dtone.git"
   },
   "bugs": {
-    "url": "https://github.com/debbysa/implement-dtone/issues"
+    "url": "https://github.com/debbysa/service-dtone/issues"
   },
-  "homepage": "https://github.com/debbysa/implement-dtone#readme"
+  "homepage": "https://github.com/debbysa/service-dtone.git#readme"
 }
