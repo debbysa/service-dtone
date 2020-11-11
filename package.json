@@ -1,8 +1,8 @@
 {
   "name": "service-dtone",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This is a service to access api from DTOne",
-  "main": "./src/service-dtone.ts",
+  "main": "./build/service-dtone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./build/index.js",
