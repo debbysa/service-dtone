@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default class ProvideDTone {
+export default class ServiceDTOne {
   domain_url: string;
   api_key: string;
   api_secret: string;
