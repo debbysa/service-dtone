@@ -4,10 +4,10 @@ You want to connect your API to Digital Value Services API DTOne? Now, you can u
 
 ## How To Install
 
-1. Install `@debbysa/service-dtone`
+1. Install `service-dtone`
 
 ```bash
-npm install @debbysa/service-dtone
+npm install service-dtone
 ```
 
 2. Import or Require the package in your project

@@ -1,6 +1,6 @@
 {
   "name": "service-dtone",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "This is a service to access api from DTOne",
   "main": "./src/service-dtone.ts",
   "scripts": {
@@ -9,16 +9,22 @@
     "build": "tsc --build",
     "dev": "tsnd --respawn ./src/index.ts"
   },
-  "author": "debbysa",
+  "author": {
+    "name": "debbysa",
+    "email": "deby.silviaagnes@gmail.com",
+    "url": "https://github.com/debbysa"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.0",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "ts-node-dev": "^1.0.0"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.9",
     "typescript": "^4.0.5"
   },
   "repository": {
