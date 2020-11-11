@@ -11,6 +11,7 @@ export default class ServiceDTOne {
     this.api_secret = api_secret;
   }
 
+  // product
   getAllProduct = async () => {
     try {
       const response = await axios.get(this.domain_url + "/products", {
