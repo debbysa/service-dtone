@@ -1,38 +1,53 @@
-import ServiceDTOne from "./service-dtone";
+import { BalancesDTOne } from "./classes/Balances-dtone";
+import { ProductDTOne } from "./classes/Product-dtone";
+import { TransactionDTOne } from "./classes/Transaction-dtone";
+import { ProductType } from "./interfaces/enum";
 
 require("dotenv").config();
 
-let DTOneService = new ServiceDTOne(
+let productService = new ProductDTOne(
+  process.env.URL || "",
+  process.env.USERNAME || "",
+  process.env.PASSWORD || ""
+);
+
+let balancesService = new BalancesDTOne(
+  process.env.URL || "",
+  process.env.USERNAME || "",
+  process.env.PASSWORD || ""
+);
+
+let transactionService = new TransactionDTOne(
   process.env.URL || "",
   process.env.USERNAME || "",
   process.env.PASSWORD || ""
 );
 
 // Retrieve list of products DTOne
-// DTOneService.getAllProduct();
+// productService.getAllProduct();
 
 // Retrieve list of products by type
-// DTOneService.getProductByType("FIXED_VALUE_PIN_PURCHASE");
+// productService.getProductByType(ProductType.FIXED_VALUE_PAYMENT);
 
 // Retrieve list of products by Service_ID
-// DTOneService.getProductByService_Id(6);
+// productService.getProductByService_Id(6);
 
 // Retrieve list of products by country_iso_code
-// DTOneService.getProductByCountryISO("MYS");
+// productService.getProductByCountryISO("MYS");
 
 // Retrieve list of products by operator_id
-// DTOneService.getProductByOperatorID(1671);
+productService.getProductByOperatorID(1671);
 
 // Retrieve product by ID
-// DTOneService.getProductById(148);
+// productService.getProductById(148);
 
 // Retrieve balances
-// DTOneService.getBalances();
+// balancesService.getBalances();
 
 // create transaction
-// DTOneService.createTransaction({
+// transactionService.createTransaction({
 //   external_id: "trx01",
-//   product_id: "147",
+//   product_id: 147,
 //   auto_confirm: false,
 //   sender: {
 //     last_name: "winda",
@@ -62,13 +77,13 @@ let DTOneService = new ServiceDTOne(
 // });
 
 // get transaction by ID
-// DTOneService.getTransactionById(2237503789);
+// transactionService.getTransactionById(2237503789);
 
 // get list of transaction
-DTOneService.getAllListofTransaction();
+// transactionService.getAllListofTransaction();
 
 // confirm transaction
-// DTOneService.confirmTransaction(2237503789);
+// transactionService.confirmTransaction(2237503789);
 
 // cancel transaction
-// DTOneService.cancelTransaction(2237503420);
+// transactionService.cancelTransaction(2237503420);
