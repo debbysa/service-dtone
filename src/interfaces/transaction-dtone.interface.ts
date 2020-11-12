@@ -1,6 +1,11 @@
+import { CalculationMode } from "./enum";
+
 export interface ItransactionCreate {
   external_id: string;
   product_id: number;
+  calculation_mode?: CalculationMode;
+  source?: ISourceandDestinationType;
+  destination?: ISourceandDestinationType;
   auto_confirm: boolean;
   sender: ISenderandBeneficiary;
   beneficiary: ISenderandBeneficiary;
@@ -8,6 +13,17 @@ export interface ItransactionCreate {
   credit_party_identifier: IdebitandCreditPartyIdentifier;
   callback_url: string;
 }
+
+interface ISourceandDestination {
+  unit_type: "CURRENCY";
+  unit: string;
+  amount: number;
+}
+
+export type ISourceandDestinationType = Omit<
+  ISourceandDestination,
+  "unit_type"
+>;
 
 export interface ISenderandBeneficiary {
   last_name: string;
