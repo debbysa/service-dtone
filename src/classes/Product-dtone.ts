@@ -21,24 +21,30 @@ export class ProductDTOne {
         },
       });
       console.log(response.data);
-      //   return response.data;
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
   getProductByType = async (type: ProductType) => {
-    const response = await axios.get(
-      this.domain_url + `/v1/products?type=${type}`,
-      {
-        auth: {
-          username: this.api_key || "",
-          password: this.api_secret || "",
-        },
-      }
-    );
-    console.log(response.data);
-    return response.data;
+    try {
+      const response = await axios.get(
+        this.domain_url + `/v1/products?type=${type}`,
+        {
+          auth: {
+            username: this.api_key || "",
+            password: this.api_secret || "",
+          },
+        }
+      );
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return error.message;
+    }
   };
 
   getProductByService_Id = async (service_id: number) => {
@@ -56,6 +62,7 @@ export class ProductDTOne {
       return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -74,6 +81,7 @@ export class ProductDTOne {
       return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -92,6 +100,7 @@ export class ProductDTOne {
       return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -107,8 +116,10 @@ export class ProductDTOne {
         }
       );
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 }

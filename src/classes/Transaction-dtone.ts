@@ -25,8 +25,10 @@ export class TransactionDTOne {
         }
       );
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -42,8 +44,10 @@ export class TransactionDTOne {
         }
       );
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -56,8 +60,10 @@ export class TransactionDTOne {
         },
       });
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -74,8 +80,10 @@ export class TransactionDTOne {
         }
       );
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 
@@ -92,8 +100,10 @@ export class TransactionDTOne {
         }
       );
       console.log(response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
+      return error.message;
     }
   };
 }
