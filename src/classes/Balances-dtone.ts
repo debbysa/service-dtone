@@ -1,22 +1,19 @@
 import axios from "axios";
+import { Config } from "./Config";
 
 export class BalancesDTOne {
-  domain_url: string;
-  api_key: string;
-  api_secret: string;
+  private cfg: Config;
 
-  constructor(domain_url: string, api_key: string, api_secret: string) {
-    this.domain_url = domain_url;
-    this.api_key = api_key;
-    this.api_secret = api_secret;
+  constructor(config: Config) {
+    this.cfg = config;
   }
 
   getBalances = async () => {
     try {
-      const response = await axios.get(this.domain_url + "/v1/balances", {
+      const response = await axios.get(this.cfg.domain_url + "/v1/balances", {
         auth: {
-          username: this.api_key || "",
-          password: this.api_secret || "",
+          username: this.cfg.api_key || "",
+          password: this.cfg.api_secret || "",
         },
       });
       console.log(response.data);
@@ -24,6 +21,7 @@ export class BalancesDTOne {
     } catch (error) {
       console.log(error);
       return error.message;
+      throw error;
     }
   };
 }

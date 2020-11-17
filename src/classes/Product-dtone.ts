@@ -1,23 +1,20 @@
 import axios from "axios";
 import { ProductType } from "../interfaces/enum";
+import { Config } from "./Config";
 
 export class ProductDTOne {
-  domain_url: string;
-  api_key: string;
-  api_secret: string;
+  private cfg: Config;
 
-  constructor(domain_url: string, api_key: string, api_secret: string) {
-    this.domain_url = domain_url;
-    this.api_key = api_key;
-    this.api_secret = api_secret;
+  constructor(config: Config) {
+    this.cfg = config;
   }
 
   getAllProduct = async () => {
     try {
-      const response = await axios.get(this.domain_url + "/v1/products", {
+      const response = await axios.get(this.cfg.domain_url + "/v1/products", {
         auth: {
-          username: this.api_key || "",
-          password: this.api_secret || "",
+          username: this.cfg.api_key || "",
+          password: this.cfg.api_secret || "",
         },
       });
       console.log(response.data);
@@ -31,11 +28,11 @@ export class ProductDTOne {
   getProductByType = async (type: ProductType) => {
     try {
       const response = await axios.get(
-        this.domain_url + `/v1/products?type=${type}`,
+        this.cfg.domain_url + `/v1/products?type=${type}`,
         {
           auth: {
-            username: this.api_key || "",
-            password: this.api_secret || "",
+            username: this.cfg.api_key || "",
+            password: this.cfg.api_secret || "",
           },
         }
       );
@@ -50,11 +47,11 @@ export class ProductDTOne {
   getProductByService_Id = async (service_id: number) => {
     try {
       const response = await axios.get(
-        this.domain_url + `/v1/products?service_id=${service_id}`,
+        this.cfg.domain_url + `/v1/products?service_id=${service_id}`,
         {
           auth: {
-            username: this.api_key || "",
-            password: this.api_secret || "",
+            username: this.cfg.api_key || "",
+            password: this.cfg.api_secret || "",
           },
         }
       );
@@ -69,11 +66,11 @@ export class ProductDTOne {
   getProductByCountryISO = async (isoCode: string) => {
     try {
       const response = await axios.get(
-        this.domain_url + `/v1/products?country_iso_code=${isoCode}`,
+        this.cfg.domain_url + `/v1/products?country_iso_code=${isoCode}`,
         {
           auth: {
-            username: this.api_key || "",
-            password: this.api_secret || "",
+            username: this.cfg.api_key || "",
+            password: this.cfg.api_secret || "",
           },
         }
       );
@@ -88,11 +85,11 @@ export class ProductDTOne {
   getProductById = async (product_id: number) => {
     try {
       const response = await axios.get(
-        this.domain_url + `/v1/products/${product_id}`,
+        this.cfg.domain_url + `/v1/products/${product_id}`,
         {
           auth: {
-            username: this.api_key || "",
-            password: this.api_secret || "",
+            username: this.cfg.api_key || "",
+            password: this.cfg.api_secret || "",
           },
         }
       );
@@ -107,11 +104,11 @@ export class ProductDTOne {
   getProductByOperatorID = async (operator_id: number) => {
     try {
       const response = await axios.get(
-        this.domain_url + `/v1/products?operator_id=${operator_id}`,
+        this.cfg.domain_url + `/v1/products?operator_id=${operator_id}`,
         {
           auth: {
-            username: this.api_key || "",
-            password: this.api_secret || "",
+            username: this.cfg.api_key || "",
+            password: this.cfg.api_secret || "",
           },
         }
       );

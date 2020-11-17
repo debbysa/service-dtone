@@ -2,7 +2,7 @@
 
 You want to connect your API to Digital Value Services API DTOne? Now, you can use this API service to handle it.
 
-## How To Install
+## Installation
 
 1. Install `service-dtone`
 
@@ -10,8 +10,46 @@ You want to connect your API to Digital Value Services API DTOne? Now, you can u
 npm install service-dtone
 ```
 
-2. Import or Require the package in your project
+2. Import (in Typescript) or Require (in Javascript) the package in your project
+
+```bash
+const {
+    Config,
+    BalancesDTOne,
+    ProductDTOne,
+    TransactionDTOne,
+    ProductType,
+    ItransactionCreate,
+    ISenderandBeneficiary,
+    IdebitandCreditPartyIdentifier,
+} = require("service-dtone");
+```
 
 ## Quick Start
 
-This is example to implement service-dtone :
+This is example to implement service-dtone in Javascript:
+
+```bash
+const {
+    Config,
+    BalancesDTOne,
+    ProductDTOne,
+    TransactionDTOne,
+    ProductType,
+    ItransactionCreate,
+    ISenderandBeneficiary,
+    IdebitandCreditPartyIdentifier,
+} = require("service-dtone");
+
+// config your domain_url, api_key, and api_secret
+const config = new Config(
+    "the domain_url",
+    "username or api_key",
+    "password or api_secret")
+
+// using endpoint of transaction
+const transactionService = new TransactionDTOne(config);
+
+// get all list of transaction
+transactionService.getAllListofTransaction();
+```

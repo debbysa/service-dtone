@@ -1,30 +1,33 @@
 import { BalancesDTOne } from "./classes/Balances-dtone";
+import { Config } from "./classes/Config";
 import { ProductDTOne } from "./classes/Product-dtone";
 import { TransactionDTOne } from "./classes/Transaction-dtone";
 import { CalculationMode, ProductType } from "./interfaces/enum";
 
 require("dotenv").config();
 
-let productService = new ProductDTOne(
+let config = new Config(
   process.env.URL || "",
   process.env.USERNAME || "",
   process.env.PASSWORD || ""
 );
 
-let balancesService = new BalancesDTOne(
-  process.env.URL || "",
-  process.env.USERNAME || "",
-  process.env.PASSWORD || ""
-);
+// let productService = new ProductDTOne(
+//   process.env.URL || "",
+//   process.env.USERNAME || "",
+//   process.env.PASSWORD || ""
+// );
 
-let transactionService = new TransactionDTOne(
-  process.env.URL || "",
-  process.env.USERNAME || "",
-  process.env.PASSWORD || ""
-);
+// let balancesService = new BalancesDTOne(
+//   process.env.URL || "",
+//   process.env.USERNAME || "",
+//   process.env.PASSWORD || ""
+// );
+
+let transactionService = new TransactionDTOne(config);
 
 // Retrieve list of products DTOne
-productService.getAllProduct();
+// productService.getAllProduct();
 
 // Retrieve list of products by type
 // productService.getProductByType(ProductType.RANGED_VALUE_PIN_PURCHASE);
