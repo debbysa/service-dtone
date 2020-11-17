@@ -1,3 +1,4 @@
+import { Config } from "./classes/Config";
 import { BalancesDTOne } from "./classes/Balances-dtone";
 import { ProductDTOne } from "./classes/Product-dtone";
 import { TransactionDTOne } from "./classes/Transaction-dtone";
@@ -9,6 +10,7 @@ import {
 } from "./interfaces/transaction-dtone.interface";
 
 export {
+  Config,
   ProductDTOne,
   BalancesDTOne,
   TransactionDTOne,

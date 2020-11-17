@@ -12,11 +12,7 @@ let config = new Config(
   process.env.PASSWORD || ""
 );
 
-// let productService = new ProductDTOne(
-//   process.env.URL || "",
-//   process.env.USERNAME || "",
-//   process.env.PASSWORD || ""
-// );
+let productService = new ProductDTOne(config);
 
 // let balancesService = new BalancesDTOne(
 //   process.env.URL || "",
@@ -27,7 +23,7 @@ let config = new Config(
 let transactionService = new TransactionDTOne(config);
 
 // Retrieve list of products DTOne
-// productService.getAllProduct();
+productService.getAllProduct();
 
 // Retrieve list of products by type
 // productService.getProductByType(ProductType.RANGED_VALUE_PIN_PURCHASE);

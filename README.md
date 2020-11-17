@@ -4,13 +4,13 @@ You want to connect your API to Digital Value Services API DTOne? Now, you can u
 
 ## Installation
 
-1. Install `service-dtone`
+Install `service-dtone`
 
 ```bash
 npm install service-dtone
 ```
 
-2. Import (in Typescript) or Require (in Javascript) the package in your project
+Import (in Typescript) or Require (in Javascript) the package in your project
 
 ```bash
 const {
