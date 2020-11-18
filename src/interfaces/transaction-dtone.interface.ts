@@ -11,7 +11,7 @@ export interface ItransactionCreate {
   beneficiary: ISenderandBeneficiary;
   debit_party_identifier: IdebitandCreditPartyIdentifier;
   credit_party_identifier: IdebitandCreditPartyIdentifier;
-  callback_url: string;
+  callback_url?: undefined;
 }
 
 interface ISourceandDestination {
