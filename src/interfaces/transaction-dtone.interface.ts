@@ -7,9 +7,9 @@ export interface ItransactionCreate {
   source?: ISourceandDestinationType;
   destination?: ISourceandDestinationType;
   auto_confirm: boolean;
-  sender: ISenderandBeneficiary;
-  beneficiary: ISenderandBeneficiary;
-  debit_party_identifier: IdebitandCreditPartyIdentifier;
+  sender?: ISenderandBeneficiary;
+  beneficiary?: ISenderandBeneficiary;
+  debit_party_identifier?: IdebitandCreditPartyIdentifier;
   credit_party_identifier: IdebitandCreditPartyIdentifier;
   callback_url?: undefined;
 }
