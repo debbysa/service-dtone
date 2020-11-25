@@ -17,11 +17,21 @@ export class ProductDTOne {
           password: this.cfg.api_secret || "",
         },
       });
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 
@@ -36,11 +46,21 @@ export class ProductDTOne {
           },
         }
       );
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 
@@ -55,11 +75,21 @@ export class ProductDTOne {
           },
         }
       );
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 
@@ -74,11 +104,21 @@ export class ProductDTOne {
           },
         }
       );
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 
@@ -93,11 +133,21 @@ export class ProductDTOne {
           },
         }
       );
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 
@@ -112,11 +162,21 @@ export class ProductDTOne {
           },
         }
       );
-      console.log(response.data);
-      return response.data;
+      console.log("data = ",response.data)
+      console.log("status = ", response.status)
+      return {
+        data: response.data,
+        status: response.status
+      };
     } catch (error) {
-      console.log(error);
-      return error.message;
+      console.log("status error", error.response.status)
+      console.log("pesan error", error.message)
+      console.log("data = ", error.response.data)
+      return {
+        status: error.response.status,
+        message: error.message,
+        data: error.response.data
+      }
     }
   };
 }

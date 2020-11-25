@@ -14,16 +14,12 @@ let config = new Config(
 
 let productService = new ProductDTOne(config);
 
-// let balancesService = new BalancesDTOne(
-//   process.env.URL || "",
-//   process.env.USERNAME || "",
-//   process.env.PASSWORD || ""
-// );
+let balancesService = new BalancesDTOne(config);
 
 let transactionService = new TransactionDTOne(config);
 
 // Retrieve list of products DTOne
-productService.getAllProduct();
+// productService.getAllProduct();
 
 // Retrieve list of products by type
 // productService.getProductByType(ProductType.RANGED_VALUE_PIN_PURCHASE);
@@ -41,7 +37,7 @@ productService.getAllProduct();
 // productService.getProductById(7935);
 
 // Retrieve balances
-// balancesService.getBalances();
+balancesService.getBalances();
 
 // create transaction
 // transactionService.createTransaction({

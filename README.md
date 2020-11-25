@@ -13,6 +13,18 @@ npm install service-dtone
 Import (in Typescript) or Require (in Javascript) the package in your project
 
 ```bash
+// typescript
+import {
+    Config,
+    BalancesDTOne,
+    ProductDTOne,
+    TransactionDTOne,
+    ProductType,
+    ItransactionCreate,
+    ISenderandBeneficiary,
+    IdebitandCreditPartyIdentifier
+    } from "service-dtone";
+// javascript
 const {
     Config,
     BalancesDTOne,
@@ -41,9 +53,9 @@ const {
     IdebitandCreditPartyIdentifier,
 } = require("service-dtone");
 
-// config your domain_url, api_key, and api_secret
+// config your domain_url, api_key, and api_secret to access DTOne
 const config = new Config(
-    "the domain_url",
+    "domain_url",
     "username or api_key",
     "password or api_secret")
 
