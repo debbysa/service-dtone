@@ -79,7 +79,7 @@ export class TransactionDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
