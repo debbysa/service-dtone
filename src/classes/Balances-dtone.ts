@@ -16,7 +16,7 @@ export class BalancesDTOne {
           password: this.cfg.api_secret || "",
         },
       });
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -25,7 +25,7 @@ export class BalancesDTOne {
     } catch (error) {
       console.log("status error", error.response.status)
       console.log("pesan error", error.message)
-      console.log("data = ", error.response.data)
+      // console.log("data = ", error.response.data)
       return {
         status: error.response.status,
         message: error.message,

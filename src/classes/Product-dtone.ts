@@ -17,7 +17,7 @@ export class ProductDTOne {
           password: this.cfg.api_secret || "",
         },
       });
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -46,7 +46,7 @@ export class ProductDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -75,7 +75,7 @@ export class ProductDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -104,7 +104,7 @@ export class ProductDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -133,7 +133,7 @@ export class ProductDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
@@ -162,7 +162,7 @@ export class ProductDTOne {
           },
         }
       );
-      console.log("data = ",response.data)
+      // console.log("data = ",response.data)
       console.log("status = ", response.status)
       return {
         data: response.data,
