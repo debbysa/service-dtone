@@ -1,22 +1,22 @@
-import { BalancesDTOne } from "./classes/Balances-dtone";
-import { Config } from "./classes/Config";
-import { ProductDTOne } from "./classes/Product-dtone";
-import { TransactionDTOne } from "./classes/Transaction-dtone";
-import { CalculationMode, ProductType } from "./interfaces/enum";
+import { BalancesDTOne } from './classes/Balances-dtone'
+import { Config } from './classes/Config'
+import { ProductDTOne } from './classes/Product-dtone'
+import { TransactionDTOne } from './classes/Transaction-dtone'
+import { CalculationMode, ProductType } from './interfaces/enum'
 
-require("dotenv").config();
+require('dotenv').config()
 
 let config = new Config(
-  process.env.URL || "",
-  process.env.USERNAME || "",
-  process.env.PASSWORD || ""
-);
+  process.env.URL || '',
+  process.env.USERNAME || '',
+  process.env.PASSWORD || ''
+)
 
-let productService = new ProductDTOne(config);
+let productService = new ProductDTOne(config)
 
-let balancesService = new BalancesDTOne(config);
+let balancesService = new BalancesDTOne(config)
 
-let transactionService = new TransactionDTOne(config);
+let transactionService = new TransactionDTOne(config)
 
 // Retrieve list of products DTOne
 // productService.getAllProduct();
@@ -34,10 +34,10 @@ let transactionService = new TransactionDTOne(config);
 // productService.getProductByOperatorID(1671);
 
 // Retrieve product by ID
-// productService.getProductById(7935);
+productService.getProductById(1115422)
 
 // Retrieve balances
-balancesService.getBalances();
+// balancesService.getBalances();
 
 // create transaction
 // transactionService.createTransaction({
