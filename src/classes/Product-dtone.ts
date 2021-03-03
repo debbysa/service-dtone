@@ -183,11 +183,14 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
-        console.log('status error = ', error.response.status)
+        // console.log(error.response)
+        const message = error.response.data.errors.map((item: { message: string }) => item.message)
+        console.log('product_id: ', `${product_id}, `, message[0])
+        // console.log('status error = ', error.response.data)
         return {
           status: error.response.status,
           data: error.response.data,
+          productId: product_id,
         }
       } else if (error.request) {
         // The request was made but no response was received

@@ -34,7 +34,7 @@ let transactionService = new TransactionDTOne(config)
 // productService.getProductByOperatorID(1671);
 
 // Retrieve product by ID
-productService.getProductById(1115422)
+productService.getProductById(31316)
 
 // Retrieve balances
 // balancesService.getBalances();
