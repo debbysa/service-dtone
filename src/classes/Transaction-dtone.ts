@@ -17,15 +17,14 @@ export class TransactionDTOne {
           password: this.cfg.api_secret || '',
         },
       })
-      // console.log('data = ', response.data)
-      // console.log('status = ', response.status)
+
       return {
         data: response.data,
         status: response.status,
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('create transaction response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -39,7 +38,7 @@ export class TransactionDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('create transaction Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -63,11 +62,12 @@ export class TransactionDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getTransactionById response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
           data: error.response.data,
+          transactionid: transaction_id,
         }
       } else if (error.request) {
         // The request was made but no response was received
@@ -101,7 +101,7 @@ export class TransactionDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getAllListofTransaction response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -115,7 +115,7 @@ export class TransactionDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getAllListofTransaction Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -143,7 +143,7 @@ export class TransactionDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('confirm transaction response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -157,7 +157,7 @@ export class TransactionDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('confirm transaction Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -185,7 +185,7 @@ export class TransactionDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('cancel transaction response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -199,7 +199,7 @@ export class TransactionDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('cancel transaction Error message = ', error.message)
         return {
           message: error.message,
         }

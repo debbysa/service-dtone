@@ -25,7 +25,7 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getAllProduct response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -39,7 +39,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getAllProduct Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -63,7 +63,7 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByType response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -77,7 +77,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByType Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -104,11 +104,12 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByService_Id response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
           data: error.response.data,
+          serviceid: service_id,
         }
       } else if (error.request) {
         // The request was made but no response was received
@@ -118,7 +119,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByService_Id Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -145,11 +146,12 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByCountryISO response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
           data: error.response.data,
+          isocode: isoCode,
         }
       } else if (error.request) {
         // The request was made but no response was received
@@ -159,7 +161,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByCountryISO Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -200,7 +202,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('get product by Id Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -227,7 +229,7 @@ export class ProductDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByOperatorID response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -241,7 +243,7 @@ export class ProductDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByOperatorID Error message = ', error.message)
         return {
           message: error.message,
         }

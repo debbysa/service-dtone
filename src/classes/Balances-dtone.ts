@@ -24,7 +24,7 @@ export class BalancesDTOne {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('balances response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -38,7 +38,7 @@ export class BalancesDTOne {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('balances Error message = ', error.message)
         return {
           message: error.message,
         }
